@@ -1,0 +1,49 @@
+<!--  Lysis Web Decompiler Wrapper
+ -
+ -  Copyright (C) 2017 Michael Flaherty // michaelwflaherty.com // michaelwflaherty@me.com
+ - 
+ - This program is free software: you can redistribute it and/or modify it
+ - under the terms of the GNU General Public License as published by the Free
+ - Software Foundation, either version 3 of the License, or (at your option) 
+ - any later version.
+ -
+ - This program is distributed in the hope that it will be useful, but WITHOUT 
+ - ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+ - FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ -
+ - You should have received a copy of the GNU General Public License along with 
+ - this program. If not, see http://www.gnu.org/licenses/.
+ -
+ -->
+
+ <!DOCTYPE html>
+<html>
+	<head>
+		<p>
+			<b>Lysis Decompiler</b>
+		</p>
+	</head>
+	
+	<body>
+		<p>
+			Lysis is a pawn decompiler which attempts to convert binary files to human-readable source code. Output from the <br>
+			lysis decompiler is not meant to be recompiled again. Enjoy.
+		</p>
+
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+			Select a plugin to decompile (*.smx or *.amxx):
+			<br> 
+			<br>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="submit" value="Decompile" name="submit">
+			<br>
+			<br>
+			<input type="checkbox" value="Output to file" name="fileOutput"><label for="fileOutput">Download file output</label>
+		</form>
+		
+		<p>
+			Lysis decompiler used was <a href="https://github.com/peace-maker">peace-maker</a>'s java port that is available on <a href="https://github.com/peace-maker/lysis-java">GitHub</a>.
+		</p>
+
+	</body>
+</html>

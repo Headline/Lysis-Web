@@ -1,0 +1,4 @@
+<FilesMatch ".jar">
+    Order Allow,Deny
+    Deny from All
+</FilesMatch>
