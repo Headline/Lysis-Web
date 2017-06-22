@@ -1,5 +1,6 @@
 # Lysis-Web
-An open source web app for Lysis so you can host it yourself if you'd like. 
+An open source web app for Lysis so you can host it yourself if you'd like.
+
 [Demo site](http://headlinedev.xyz/lysis/)
 
 ## Dependency
