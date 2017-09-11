@@ -85,7 +85,7 @@
 		{
 			return false;
 		}
-		else if($type != "smx" && $type != "amxx")
+		else if($type != "smx")
 		{
 			return false;
 		}
