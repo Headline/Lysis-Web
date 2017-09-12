@@ -28,7 +28,7 @@
 		{
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) // moved sucessfully
 			{
-				$output = shell_exec('java -jar lysis-java.jar '.$target_file); // get lysis output
+				$output = shell_exec('java -jar lysis-java.jar "'.$target_file.'"'); // get lysis output
 								
 				if (isset($_POST["fileOutput"])) // download to file
 				{
