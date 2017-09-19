@@ -25,11 +25,13 @@
 	if(isset($_POST["submit"])) // submit pressed
 	{
 		if (is_valid_file($_FILES["fileToUpload"], $type)) // file is valid
-		{
+		{			
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) // moved sucessfully
 			{
-				$output = shell_exec('java -jar lysis-java.jar "'.$target_file.'"'); // get lysis output
-								
+				
+				rename($target_file, $targetdir.'file.smx');
+				$output = shell_exec('java -jar lysis-java.jar file.smx'); // get lysis output
+				
 				if (isset($_POST["fileOutput"])) // download to file
 				{
 					download_output($output, basename($_FILES["fileToUpload"]["name"]));
@@ -41,8 +43,7 @@
 				}
 				
 				// we're not nsa
-				unlink($target_file.".txt");
-				unlink($target_file);
+				unlink($targetdir.'file.smx');
 			}
 		}
 		else // ya fucked up
