@@ -25,26 +25,20 @@
 	if(isset($_POST["submit"])) // submit pressed
 	{
 		if (is_valid_file($_FILES["fileToUpload"], $type)) // file is valid
-		{			
-			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) // moved sucessfully
+		{							
+			$output = shell_exec('java -jar lysis-java.jar '.$_FILES["fileToUpload"]["tmp_name"]); // get lysis output
+			
+			if (isset($_POST["fileOutput"])) // download to file
 			{
-				
-				rename($target_file, $targetdir.'file.smx');
-				$output = shell_exec('java -jar lysis-java.jar file.smx'); // get lysis output
-				
-				if (isset($_POST["fileOutput"])) // download to file
-				{
-					download_output($output, basename($_FILES["fileToUpload"]["name"]));
-
-				}
-				else // print to browser
-				{
-					echo "<pre> $output </pre>";
-				}
-				
-				// we're not nsa
-				unlink($targetdir.'file.smx');
+				download_output($output, basename($_FILES["fileToUpload"]["name"]));
 			}
+			else // print to browser
+			{
+				echo "<pre> $output </pre>";
+			}
+			
+			
+			unlink($target_file.'.txt'); // we're not nsa
 		}
 		else // ya fucked up
 		{
@@ -71,7 +65,6 @@
 		header('Content-Length: '.filesize($filename . ".txt"));
 		header('Connection: close');
 		readfile($filename . ".txt");
-		exit();
 	}
 
 	function is_valid_file($array, $type)
