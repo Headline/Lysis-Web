@@ -19,36 +19,49 @@
  <!DOCTYPE html>
 <html>
 	<head>
-		<title>Online Lysis Decompiler - SourceMod</title>
+	 	<link rel="stylesheet" href="styles.css">
+
+		<div class="std">
+		<br>
 		<p>
-			<b>Lysis Decompiler</b>
+			<h2>Lysis Decompiler</h2>
 		</p>
+		</div>
+		<hr width="800">
 	</head>
 	
 	<body>
-		<p>
-			Lysis is a pawn decompiler which attempts to convert binary files to human-readable source code. Output from the <br>
-			lysis decompiler is not meant to be recompiled again. Enjoy.
-		</p>
+			<div class="std">
+			<div class="alert">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+					Smart Tip: Decompiled SourceMod plugins are not meant to be recompiled!
+			</div>
+			
+			<p>
+				Lysis is a sourcepawn plugin decompiler which attempts to convert binary files to human-readable source code.
+			</p>
 
-		<form action="upload.php" method="post" enctype="multipart/form-data">
-			Select a plugin to decompile (*.smx):
-			<br> 
-			<br>
-			<input type="file" name="fileToUpload" id="fileToUpload">
-			<input type="submit" value="Decompile" name="submit">
-			<br>
-			<br>
-			<input type="checkbox" value="Output to file" name="fileOutput"><label for="fileOutput">Download file output</label>
-		</form>
-		
-		<p>
-			Lysis decompiler used was <a href="https://github.com/peace-maker">peace-maker</a>'s java port that is available on <a href="https://github.com/peace-maker/lysis-java">GitHub</a>.
-		</p>
-		
-		<p>
-			This software is free and open source, visit our github <a href="https://github.com/Headline22/Lysis-Web">here</a> and contribute.
-		</p>
+				<form action="upload.php" method="post" enctype="multipart/form-data">
+					Select a plugin to decompile (*.smx):
+					<br> 
+					<br>
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<input type="submit" value="Decompile" name="submit">
+					<br>
+					<br>
+					<input type="checkbox" value="Output to file" name="fileOutput"><label for="fileOutput">Download file output</label>
+				</form>
+			
+				
+				<br>
+				<br>
+				<p>
+					<font size="2">Lysis decompiler used was <a href="https://github.com/peace-maker">peace-maker</a>'s java port that is available on <a href="https://github.com/peace-maker/lysis-java">GitHub</a>.</font>
+					<br>
+					<font size="2">This software is free and open source, visit our github <a href="https://github.com/Headline22/Lysis-Web">here</a> and contribute.</font>
+				</p>
+
+		</div>
 
 	</body>
 </html>
