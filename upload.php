@@ -34,7 +34,8 @@
 			}
 			else // print to browser
 			{
-				echo "<pre> $output </pre>";
+				$cleanoutput = htmlentities($output);
+				echo "<pre> $cleanoutput </pre>";
 			}
 			
 			
