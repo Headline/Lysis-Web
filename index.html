@@ -19,7 +19,8 @@
  <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lysis SourceMod Decompiler</title>
+		<title>Lysis SourceMod/AMX Decompiler</title>
+
 	 	<link rel="stylesheet" href="styles.css">
 
 		<div class="std">
@@ -35,15 +36,15 @@
 			<div class="std">
 			<div class="alert">
 				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-					Smart Tip: Decompiled SourceMod plugins are not meant to be recompiled!
+					Smart Tip: Decompiled plugins are not meant to be recompiled!
 			</div>
 			
 			<p>
-				Lysis is a sourcepawn plugin decompiler which attempts to convert binary files to human-readable source code.
+				Lysis is a sourcepawn/pawn plugin decompiler which attempts to convert binary files to human-readable source code.
 			</p>
 
 				<form action="upload.php" method="post" enctype="multipart/form-data">
-					Select a plugin to decompile (*.smx):
+					Select a plugin to decompile (*.smx or *.amxx):
 					<br> 
 					<br>
 					<input type="file" name="fileToUpload" id="fileToUpload">
