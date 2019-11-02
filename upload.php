@@ -26,7 +26,7 @@
 	{
 		if (is_valid_file($_FILES["fileToUpload"], $type)) // file is valid
 		{							
-			$output = shell_exec('java -jar lysis-java.jar '.$_FILES["fileToUpload"]["tmp_name"]); // get lysis output
+			$output = shell_exec('timeout 30s java -jar lysis-java.jar '.$_FILES["fileToUpload"]["tmp_name"]); // get lysis output
 			
 			if (isset($_POST["fileOutput"])) // download to file
 			{
