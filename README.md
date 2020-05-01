@@ -5,7 +5,7 @@ An open source web app for Lysis so you can host it yourself if you'd like.
 
 ## Dependency
 This project requires the [java lysis decompiler](https://github.com/peace-maker/lysis-java) so feel free to compile it yourself or you can just
-[download mine](http://www.headlinedev.xyz/lysis/lysis-java.jar) if you're lazy. I'll try to keep my copy up to date. As of this writing, the jar is built from commit `9cd470f`, if this is outdated, please let me know.
+[download mine](http://www.headlinedev.xyz/lysis/lysis-java.jar) if you're lazy. I'll try to keep my copy up to date. As of this writing, the jar is built from commit `95d891c`, if this is outdated, please let me know.
 
 ## Installation
 - Copy files over to your webserver

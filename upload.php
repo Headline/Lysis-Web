@@ -27,7 +27,10 @@
 		if (is_valid_file($_FILES["fileToUpload"], $type)) // file is valid
 		{							
 			$output = shell_exec('timeout 30s java -jar lysis-java.jar '.$_FILES["fileToUpload"]["tmp_name"]); // get lysis output
-			
+			if ($output == NULL) {
+				include('error.html');
+				die();
+			}
 			if (isset($_POST["fileOutput"])) // download to file
 			{
 				download_output($output, basename($_FILES["fileToUpload"]["name"]));
@@ -38,8 +41,9 @@
 				echo "<pre> $cleanoutput </pre>";
 			}
 			
-			
-			unlink($target_file.'.txt'); // we're not nsa
+			$file = basename($_FILES["fileToUpload"]["name"]).'.txt';
+			if (file_exists($file))
+				unlink($file); // we're not nsa
 		}
 		else // ya fucked up
 		{

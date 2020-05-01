@@ -26,19 +26,38 @@ div.std {
 }
 
 h1 {
-	color: #7c795d;
+	color: #53a2b4;
 	font-family: 'Trocchi', serif;
 	font-size: 45px;
 	font-weight: normal;
 	line-height: 48px;
 	margin: 0;
 }
+form {
+	color: #bcb787;
+}
+p {
+	color: #bcb787;
+}
 
+body {
+	background-color: #202020;	
+}
+
+a {
+  color: #c2b848;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+a, a:hover {
+  text-decoration: none;
+}
 
 h2 {
-	color: #7c795d;
+	color: #bcb787;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 28px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 32px;
 	margin: 0 0 24px;
